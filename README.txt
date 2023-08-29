@@ -1,33 +1,37 @@
-НАЗНАЧЕНИЕ
+PURPOSE
 ----------
-pnglearn - утилита для статистического анализа PGN-файлов и автоматического подбора коэффициентов оценочной функции.
-В настоящей версии определяет только оптимальные стоимости шахматных фигур.
+PGNLearn is a console app for statistical analysis of PGN files and automatic selection of the coefficients of the evaluation function.
+In this version, it determines only the optimal values of chess pieces.
 
 
-КАТАЛОГИ
+CATALOGS
 --------
-src - исходный код и файлы для сборки
-pgn - образцы тестовых файлов с партиями
+src - source code and build files
+pgn - sample test files with batches
+
+RELEASES
+--------
+pgnlearn.exe - located in releases page and only runs (for me in mingw/console)
 
 
-СБОРКА
+ASSEMBLY
 ------
-Возможна сборка под Windows (компилятор MSVC или MinGW/gcc) или под Linux (gcc).
-Используйте pgnlearn.sln или Makefile.
+It can be built under Windows (MSVC compiler or MinGW/gcc) or under Linux (gcc).
+Use pgnlearn.sln or Makefile.
 
 
-ЗАПУСК
+LAUNCH
 ------
 pgnlearn.exe <file.pgn>
-Программа производит 10000 шагов градиентного спуска и выводит в консоль вектор стоимостей фигур.
+The program performs 10,000 steps of gradient descent and outputs a vector of figure costs to the console.
 
 
-СОЗДАВАЕМЫЕ ФАЙЛЫ
+GENERATED FILES
 -----------------
-file.mat        - матрица признаков (значения материального баланса и результаты партий)
-iterations.txt  - динамика изменения весов и минимизируемой функции по итерациям
-probability.txt - статистика набираемых очков белыми в зависимости от материального баланса
+file.mat - feature matrix (material balance values and game results)
+iterations.txt - dynamics of changes in weights and minimized function over iterations
+probability.txt - statistics of points scored by White depending on the material balance
 
 
-(c) 2015 Владимир Медведев
+(c) 2015 Vladimir Medvedev
 vladimir.medvedev@gmail.com
